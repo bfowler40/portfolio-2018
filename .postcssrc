@@ -1,0 +1,10 @@
+{
+  "modules": true,
+  "plugins": {
+    "autoprefixer": {},
+    "cssnano": {
+      preset: "default",
+      zindex: false
+    }
+  }
+}
