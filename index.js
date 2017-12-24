@@ -1,5 +1,8 @@
 import './src/scss/main.scss';
+import './src/js/app.tsx';
 
+
+/*
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -18,3 +21,4 @@ const App = () => {
 const root = document.getElementById('app');
 
 ReactDOM.render(<App />, root);
+*/

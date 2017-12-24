@@ -15,6 +15,7 @@
 				}
 			}
 		],
-		"variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
+		"variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+        "no-angle-bracket-type-assertion": true
 	}
 }

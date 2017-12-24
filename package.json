@@ -20,7 +20,10 @@
   "homepage": "https://github.com/bfowler40/portfolio-2018#readme",
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.3",
@@ -29,6 +32,7 @@
     "cssnano": "^3.10.0",
     "node-sass": "^4.7.2",
     "parcel-bundler": "^1.3.0",
-    "postcss-modules": "^1.1.0"
+    "postcss-modules": "^1.1.0",
+    "typescript": "^2.6.2"
   }
 }
