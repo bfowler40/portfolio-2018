@@ -6,7 +6,7 @@ import { Root }      from './components/root';
 // Load the font from google
 WebFont.load({
 	google: {
-		families: ['Fira Mono'],
+		families: ['Fira Mono:400,500,700'],
 	},
 });
 
