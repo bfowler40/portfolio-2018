@@ -1,0 +1,26 @@
+.header {
+	display: flex;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	background: rgba(aqua, 0.2);
+
+	&--menu_active {
+		background: rgba(magenta, 0.2);
+	}
+}
+
+.header-title {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.header-email {
+	display: inline-block;
+	margin: 0 0 0 auto;
+
+	&--menu_active {
+		visibility: hidden;
+	}
+}

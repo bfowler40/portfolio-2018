@@ -1,6 +1,8 @@
 
 // @import 'container';
 
+@import 'components/header';
+
 body {
 	font-family: 'Fira Mono';
 	background: whitesmoke;
@@ -12,4 +14,11 @@ body {
 
 .active {
 	color: purple;
+}
+
+
+
+main,
+nav {
+	margin-top: 200px;
 }

@@ -20,6 +20,7 @@
   "homepage": "https://github.com/bfowler40/portfolio-2018#readme",
   "dependencies": {
     "autobind-decorator": "^2.1.0",
+    "classnames": "^2.2.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
