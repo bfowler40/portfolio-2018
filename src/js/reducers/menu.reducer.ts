@@ -1,7 +1,14 @@
+const data = {
+	menuActive: true,
+	menuItems: [
+		'work',
+		'skills',
+		'about',
+	],
+};
+
 export default (
-	state = {
-		menuActive: true,
-	},
+	state = data,
 	action
 ) => {
 	switch (action.type) {
