@@ -3,23 +3,19 @@ import { connect }    from 'react-redux';
 import { NavLink }    from 'react-router-dom';
 import { menuToggle } from '../../actions/menu.action';
 
-@connect((store) => {
+@connect((store: any) => {
 	return {
 		menuActive: store.menu.menuActive,
 	};
 })
 export class Nav extends React.Component<any, any> {
-	constructor(props: {}) {
-		super(props);
-		this.state = { name: 'ben' };
-	}
 
 	public toggleMenu(): void {
 		this.props.dispatch(menuToggle());
 	}
 
 	public render(): JSX.Element {
-		 return (
+		return (
 			<nav>
 				{ this.props.menuActive ? 'menu-active' : 'menu-deactive' }
 				<ul>

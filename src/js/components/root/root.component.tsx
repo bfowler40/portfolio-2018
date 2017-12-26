@@ -8,16 +8,19 @@ import {
 }                   from 'react-router-dom';
 import  store       from '../../store/store';
 import { About }    from '../about';
+import { Header }   from '../header';
 import { Nav }      from '../nav';
 import { Skills }   from '../skills';
 import { Work }     from '../work';
 
 export class Root extends React.Component<any, any> {
+
 	public render(): JSX.Element {
 		return (
 			<Provider store={ store }>
 				<BrowserRouter>
 					<div className="container">
+						<Header />
 						<Nav />
 						<main>
 							<Switch>

@@ -9,4 +9,4 @@ import rootReducer      from '../reducers';
 
 const middleware = applyMiddleware(promise(), thunk, createLogger());
 
-export default createStore(rootReducer, middleware);
+export default createStore(rootReducer);
