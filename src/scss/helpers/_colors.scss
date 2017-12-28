@@ -1,0 +1,73 @@
+.colors-accent {
+	color: blue;
+	// color: $colorAccent500;
+	// animation-duration: 20000ms;
+	// animation-name: colorAnimation;
+	// animation-iteration-count: infinite;
+}
+
+.colors-background_accent {
+	background: blue;
+	// background: $colorAccent500;
+	// animation-duration: 20000ms;
+	// animation-name: colorBackgroundAnimation;
+	// animation-iteration-count: infinite;
+}
+
+// Thinking ill change the color each time the menu is updated
+
+/*
+@keyframes colorAnimation {
+	0% {
+		color: $colorAccent400;
+	}
+	24% {
+		color: $colorAccent400;
+	}
+	25% {
+		color: $colorAccent500
+	}
+	49% {
+		color: $colorAccent500
+	}
+	50% {
+		color: $colorAccent600;
+	}
+	74% {
+		color: $colorAccent600;
+	}
+	75% {
+		color: $colorAccent300;
+	}
+	99% {
+		color: $colorAccent300;
+	}
+}
+
+@keyframes colorBackgroundAnimation {
+	0% {
+		background: $colorAccent400;
+	}
+	24% {
+		background: $colorAccent400;
+	}
+	25% {
+		background: $colorAccent500
+	}
+	49% {
+		background: $colorAccent500
+	}
+	50% {
+		background: $colorAccent600;
+	}
+	74% {
+		background: $colorAccent600;
+	}
+	75% {
+		background: $colorAccent300;
+	}
+	99% {
+		background: $colorAccent300;
+	}
+}
+*/

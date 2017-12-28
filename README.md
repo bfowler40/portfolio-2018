@@ -6,19 +6,19 @@ New portfolio site.
 
 Install [Parcel](https://parceljs.org/) bundler with npm:
 ```
-npm install -g parcel-bundler
+npm i -g parcel-bundler
 ```
 
 Install PostCSS CLI
 ```
-npm install -g postcss-cli
+npm i -g postcss-cli
 ```
 
 ### Install
 
 Add dependencies
 ```
-npm install
+npm i
 ```
 
 Run the bundler

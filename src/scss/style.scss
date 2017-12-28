@@ -1,0 +1,21 @@
+@import 'settings/color';
+@import 'settings/font';
+@import 'settings/transition';
+@import 'settings/zIndex';
+
+@import 'tools/pxToRem';
+
+@import 'generic/reset';
+@import 'generic/elements';
+
+@import 'helpers/colors';
+@import 'helpers/headings';
+
+@import 'components/header';
+@import 'components/main';
+@import 'components/nav';
+
+
+main {
+	margin-top: 200px;
+}
