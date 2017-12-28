@@ -10,7 +10,7 @@ import { About }       from '../about';
 import { Skills }      from '../skills';
 import { Work }        from '../work';
 
-@connect((store: any) => {
+@connect((store: any): any => {
 	return {
 		menuActive: store.menu.menuActive,
 	};

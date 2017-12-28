@@ -7,7 +7,7 @@ import { menuToggle }  from '../../actions/menu.action';
 import * as iconRocket from '../../../icons/rocket.svg';
 import * as iconSkull  from '../../../icons/skull.svg';
 
-@connect((store: any) => {
+@connect((store: any): any => {
 	return {
 		menuActive: store.menu.menuActive,
 	};

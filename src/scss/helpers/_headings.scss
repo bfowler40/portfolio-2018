@@ -1,4 +1,11 @@
 
+.headings-large {
+	font-size: pxToRem(124);
+	font-weight: $fontWeightBold;
+	text-transform: uppercase;
+	letter-spacing: pxToRem(12);
+}
+
 .headings-standard {
 	font-size: pxToRem(22);
 	font-weight: $fontWeightMedium;

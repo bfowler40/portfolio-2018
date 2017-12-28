@@ -1,14 +1,7 @@
-const data = {
-	menuActive: true,
-	menuItems: [
-		'work',
-		'skills',
-		'about',
-	],
-};
+import menu from '../data/menu';
 
 export default (
-	state = data,
+	state = menu,
 	action
 ) => {
 	switch (action.type) {

@@ -1,6 +1,7 @@
 @import 'settings/color';
 @import 'settings/font';
 @import 'settings/transition';
+@import 'settings/zIndex';
 
 @import 'tools/pxToRem';
 
@@ -15,7 +16,6 @@
 @import 'components/nav';
 
 
-main,
-nav {
+main {
 	margin-top: 200px;
 }

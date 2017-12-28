@@ -2,7 +2,7 @@ import * as React     from 'react';
 import { connect }    from 'react-redux';
 import { menuToggle } from '../../actions/menu.action';
 
-@connect((store: any) => {
+@connect((store: any): any => {
 	return {
 		menuActive: store.menu.menuActive,
 	};

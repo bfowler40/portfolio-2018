@@ -1,8 +1,10 @@
 .header {
 	display: flex;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
+	z-index: $zIndexHeader;
 	padding: pxToRem(16);
 }
 
@@ -16,12 +18,14 @@
 	display: inline-block;
 	margin: pxToRem(6) 0 0 auto;
 
-	will-change: visibility;
-	visibility: visible;
-	transition: visibility $transitionSpeedDefault $transitionEaseDefault;
+	will-change: opacity;
+	opacity: 1;
+	pointer-events: all;
+	transition: opacity $transitionSpeedDefault $transitionEaseDefault;
 
 	.header--menu_active & {
-		visibility: hidden;
+		pointer-events: none;
+		opacity: 0;
 	}
 
 	&:hover,

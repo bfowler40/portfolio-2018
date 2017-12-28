@@ -1,7 +1,84 @@
 .nav {
 	display: none;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: $zIndexNav;
 
 	&--menu_active {
+		display: flex;
+	}
+}
+
+.nav-list {
+	flex: 1 0 50%;
+	text-align: right;
+}
+
+.nav-item {
+	position: relative;
+	display: inline-block;
+	line-height: 1.1;
+	padding: 0 pxToRem(16);
+	margin: pxToRem(8);
+}
+
+.nav-effect {
+	//display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	color: $colorWhite;
+	padding: 0 pxToRem(16);
+	pointer-events: none;
+	z-index: 1;
+	overflow: hidden;
+
+	opacity: 0;
+	transition: $transitionAllDefault;
+
+	.nav-link--active + & {
+		//display: block;
+		// max-height: 100%;
+		opacity: 1;
+	}
+
+	.nav-list:hover .nav-link--active + & {
+		// max-height: 0;
+		opacity: 0;
+	}
+
+	.nav-list:hover .nav-item:hover & {
+		// max-height: 100% !important;
+		opacity: 1;
+	}
+
+	&:before {
+		content: attr(item);
 		display: block;
+		position: absolute;
+		top: 0;
+	}
+}
+
+.nav-effect-text {
+	position: absolute;
+	top: 0;
+	right: 16px;
+}
+
+.nav-description {
+	flex: 1 0 50%;
+
+	.test {
+		text-align: right;
+		max-width: 300px;
+		padding: pxToRem(16);
+		margin: 0 0 0 auto;
 	}
 }
