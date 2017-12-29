@@ -16,6 +16,7 @@ export class Work extends React.Component<any, any> {
 	public render(): JSX.Element {
 		return (
 			<section>
+				<h2 className="headings-large">Work</h2>
 				This is my work!
 				<button onClick={ this.clickButton.bind(this) }>Click Me</button>
 			</section>

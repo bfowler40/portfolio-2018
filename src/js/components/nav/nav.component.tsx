@@ -3,6 +3,7 @@ import * as React      from 'react';
 import { connect }     from 'react-redux';
 import { NavLink }     from 'react-router-dom';
 import { menuToggle }  from '../../actions/menu.action';
+import { NavItem }     from './nav-item.component.tsx';
 
 @connect((store: any): any => {
 	return {
@@ -24,13 +25,19 @@ export class Nav extends React.Component<any, any> {
 		return (
 			<nav className={ navClass }>
 				<ul className="nav-list">
-					{ this.props.menuItems.map((menuItem: any, index: number) =>
-							this.renderMenuItem(menuItem, index)) }
+					{ this.props.menuItems.map((menuItem: any, index: number) => this.renderMenuItem(menuItem, index)) }
 				</ul>
-				<div className="nav-description">
-					<div className="test">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				<div className="nav-details">
+					<div className="nav-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+						do eiusmod tempor.</p>
+						<ul className="nav-contact">
+							<li><a href="mailto:bfowler40@gmail.com">* bfowler40@gmail.com</a></li>
+							<li><a href="#">* LinkedIn</a></li>
+							<li><a href="#">* Github</a></li>
+							<li><a href="#">* Resume</a></li>
+							<li><a href="#">* 0412 462 774</a></li>
+						</ul>
 					</div>
 				</div>
 			</nav>
@@ -44,23 +51,11 @@ export class Nav extends React.Component<any, any> {
 	 * @param int index
 	 * @return string
 	 */
-	 public renderMenuItem(menuItem: any, index: number): JSX.Element {
-		 return (
-			 <li
-			 	key={index}
-				className="headings-large nav-item">
-				<NavLink
-				 	onClick={ this.toggleMenu.bind(this) }
-					className="nav-link"
-					activeClassName="nav-link--active"
-					to={ `/${ menuItem.slug }` }>
-					{ menuItem.title }
-				</NavLink>
-				<span
-					className="colors-background_accent nav-effect"
-					item={ menuItem.title }>
-				</span>
-			 </li>
-		 );
-	 }
+	public renderMenuItem(menuItem: any, index: number): JSX.Element {
+		return (
+			<li className="headings-large nav-item" key={ index }>
+				<NavItem menuItem={ menuItem } />
+		 	</li>
+		);
+	}
 }

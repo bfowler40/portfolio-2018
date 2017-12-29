@@ -1,5 +1,5 @@
 .nav {
-	display: none;
+	display: flex;
 	align-items: center;
 	position: fixed;
 	top: 0;
@@ -8,8 +8,14 @@
 	height: 100vh;
 	z-index: $zIndexNav;
 
+	opacity: 0;
+	pointer-events: none;
+	will-change: opacity;
+	transition: opacity $transitionSpeedDefault $transitionEaseDefault;
+
 	&--menu_active {
-		display: flex;
+		opacity: 1;
+		pointer-events: all;
 	}
 }
 
@@ -27,7 +33,6 @@
 }
 
 .nav-effect {
-	//display: none;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -40,21 +45,18 @@
 	overflow: hidden;
 
 	opacity: 0;
+	will-change: opacity;
 	transition: $transitionAllDefault;
 
 	.nav-link--active + & {
-		//display: block;
-		// max-height: 100%;
 		opacity: 1;
 	}
 
 	.nav-list:hover .nav-link--active + & {
-		// max-height: 0;
 		opacity: 0;
 	}
 
 	.nav-list:hover .nav-item:hover & {
-		// max-height: 100% !important;
 		opacity: 1;
 	}
 
@@ -72,13 +74,17 @@
 	right: 16px;
 }
 
-.nav-description {
+.nav-details {
 	flex: 1 0 50%;
+	text-align: right;
+}
 
-	.test {
-		text-align: right;
-		max-width: 300px;
-		padding: pxToRem(16);
-		margin: 0 0 0 auto;
-	}
+.nav-description {
+	max-width: 300px;
+	padding: pxToRem(16);
+	margin: 0 0 0 auto;
+}
+
+.nav-contact {
+	color: $colorAccent500;
 }
