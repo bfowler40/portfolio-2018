@@ -6,7 +6,11 @@ export default (
 ) => {
 	switch (action.type) {
 		case 'MENU_TOGGLE': {
-			return { ...state, menuActive: !state.menuActive };
+			return {
+				...state,
+				menuActive: !state.menuActive,
+				menuCurrentElement: action.payload.el,
+			};
 		}
 	}
 

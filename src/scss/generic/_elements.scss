@@ -20,20 +20,22 @@ body {
 	line-height: 1.6;
 }
 
-section {
-	animation-duration: 200ms;
-	animation-name: fade;
-	animation-iteration-count: 1;
-}
-
-@keyframes fade {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
+// section {
+// 	animation-duration: 200ms;
+// 	animation-name: fade;
+// 	animation-iteration-count: 1;
+// }
+//
+// @keyframes fade {
+// 	from {
+// 		transform: translate3d(0, 100px, 0);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: translate3d(0, 0, 0);
+// 	}
+// }
 
 *,
 *:before,
@@ -68,9 +70,9 @@ a {
 	// transition: all 300ms ease-in-out;
 }
 
-// p {
-// 	margin: pxToRem(25) 0;
-// }
+p {
+	margin: pxToRem(24) 0;
+}
 
 strike {
 	display: inline-block;
