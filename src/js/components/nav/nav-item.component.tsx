@@ -4,6 +4,9 @@ import { connect }     from 'react-redux';
 import { NavLink }     from 'react-router-dom';
 import { menuToggle }  from '../../actions/menu.action';
 
+import * as campos from '../../../images/work-campos.jpg';
+import * as nous   from '../../../images/work-nous.jpg';
+
 @connect((store: any): any => {
 	return {
 		menuActive: store.menu.menuActive,
@@ -39,8 +42,22 @@ export class NavItem extends React.Component<any, any> {
 					className="colors-background_accent nav-effect"
 					item={ this.props.menuItem.title }>
 				</span>
+				{ this.temp() }
 			</div>
 		);
+	}
+
+	public temp() {
+		if (
+			this.props.menuItem.slug === this.props.menuDefault
+		) {
+			return (
+				<div>
+					<img className="image image-campos" src={ `/dist/${campos}`} />
+					<img className="image image-nous" src={ `/dist/${nous}`} />
+				</div>
+			);
+		}
 	}
 
 }

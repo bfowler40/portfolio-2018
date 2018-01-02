@@ -88,3 +88,28 @@
 .nav-contact {
 	color: $colorAccent500;
 }
+
+
+
+
+.image {
+	position: fixed;
+	z-index: -1;
+
+	opacity: 0;
+	transition: all 400ms ease-in-out;
+
+	&-campos {
+		right: 6vw;
+		top: 12vh;
+	}
+
+	&-nous {
+		left: 8vw;
+		bottom: -1vh;
+	}
+
+	.nav-item:hover & {
+		opacity: 1;
+	}
+}
