@@ -1,5 +1,6 @@
 .main {
 	display: block;
+	margin: pxToRem(80) pxToRem(16) pxToRem(16);
 
 	&--menu_active {
 		display: none;

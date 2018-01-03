@@ -53,8 +53,8 @@ export class NavItem extends React.Component<any, any> {
 		) {
 			return (
 				<div>
-					<img className="image image-campos" src={ `/dist/${campos}`} />
-					<img className="image image-nous" src={ `/dist/${nous}`} />
+					<img className="image image-campos" src={ `/dist${campos}`} />
+					<img className="image image-nous" src={ `/dist${nous}`} />
 				</div>
 			);
 		}
