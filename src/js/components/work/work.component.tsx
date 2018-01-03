@@ -18,14 +18,14 @@ export class Work extends React.Component<any, any> {
 
 	public render(): JSX.Element {
 		return (
-			<section className="work">
-				<header className="work-header">
-					<h2 className="headings-large work-title">{ workData.title }</h2>
-					<div className="work-description">{ workData.description }</div>
+			<section className="content">
+				<header className="content-header">
+					<h2 className="headings-large content-title">{ workData.title }</h2>
+					<div className="content-description">{ workData.description }</div>
 				</header>
-				<div className="work-examples">
+
 					{ workData.projects.map((project, index) => this.renderProject(project, index)) }
-				</div>
+
 				<button onClick={ this.clickButton.bind(this) }>Sho Menu</button>
 			</section>
 		);

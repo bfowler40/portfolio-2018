@@ -1,33 +1,4 @@
 
-.work {
-	max-width: pxToRem(1440);
-	margin: 0 auto pxToRem(64);
-}
-
-.work-header {
-	max-width: pxToRem(760);
-	margin: 0 0 0 pxToRem(32);
-}
-
-.work-title {
-	position: relative;
-	display: inline-block;
-	color: $colorWhite;
-	line-height: 1.1;
-	margin: 0 0 pxToRem(32);
-
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: pxToRem(-16);
-		bottom: 0;
-		left: pxToRem(-16);
-		z-index: -1;
-		background-color: $colorAccent500;
-	}
-}
-
 .work-project {
 	position: relative;
 	max-width: pxToRem(640);
