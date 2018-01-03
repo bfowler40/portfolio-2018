@@ -20,7 +20,7 @@ export class Work extends React.Component<any, any> {
 		return (
 			<section className="work">
 				<header className="work-header">
-					<h2 className="headings-large">{ workData.title }</h2>
+					<h2 className="headings-large work-title">{ workData.title }</h2>
 					<div className="work-description">{ workData.description }</div>
 				</header>
 				<div className="work-examples">
@@ -34,10 +34,16 @@ export class Work extends React.Component<any, any> {
 	public renderProject(project, index): JSXElement {
 		return (
 			<div className="work-project" key={ index }>
-				<h3 className="work-project-title">{ project.title }</h3>
-				<h4 className="work-project-platform">{ project.platform }</h4>
+				<h3 className="headings-medium work-project-title">{ project.title }</h3>
+				<h4 className="headings-standard work-project-platform">{ project.platform }</h4>
 				<div className="work-project-description">{ project.description }</div>
 				<img className="work-project-image" src={ `/dist${ project.image}` } />
+				<a	className="work-project-link"
+					href={ project.url }
+					target="_blank"
+					rel="nofollow noreferrer">
+					Website
+				</a>
 			</div>
 		);
 	}
