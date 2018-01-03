@@ -1,6 +1,6 @@
 console.warn('Menu.ts: Remove menuCurrentElement if unused');
 export default {
-	menuActive: true,
+	menuActive: false,
 	menuCurrentElement: false,
 	menuDefault: 'work',
 	menuItems: [
@@ -9,11 +9,11 @@ export default {
 			slug: 'work',
 			title: 'Work',
 		},
-		{
-			images: [],
-			slug: 'skills',
-			title: 'Skills',
-		},
+		// {
+		// 	images: [],
+		// 	slug: 'skills',
+		// 	title: 'Skills',
+		// },
 		{
 			images: [],
 			slug: 'about',
