@@ -24,22 +24,23 @@ body {
 	overflow: hidden;
 }
 
-// section {
-// 	animation-duration: 200ms;
-// 	animation-name: fade;
-// 	animation-iteration-count: 1;
-// }
-//
-// @keyframes fade {
-// 	from {
-// 		transform: translate3d(0, 100px, 0);
-// 		opacity: 0;
-// 	}
-// 	to {
-// 		opacity: 1;
-// 		transform: translate3d(0, 0, 0);
-// 	}
-// }
+section {
+	//opacity: 0;
+	// animation-duration: 1000ms;
+	// animation-name: fade;
+	// animation-iteration-count: 1;
+}
+
+@keyframes fade {
+	from {
+		transform: translate3d(0, 100px, 0);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
 
 *,
 *:before,

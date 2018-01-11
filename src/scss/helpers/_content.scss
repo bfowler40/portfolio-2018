@@ -2,6 +2,7 @@
 .content {
 	max-width: pxToRem(1440);
 	margin: pxToRem(128) auto;
+	white-space: pre-line;
 }
 
 .content-header {

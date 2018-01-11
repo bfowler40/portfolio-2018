@@ -21,10 +21,17 @@ export class Work extends React.Component<any, any> {
 			<section className="content">
 				<header className="content-header">
 					<h2 className="headings-large content-title">{ workData.title }</h2>
-					<div className="content-description">{ workData.description }</div>
+					<div className="content-description">
+						{ workData.description }
+						<br/>
+						<h3 className="headings-standard">Y'all got any more of them awards?</h3>
+						<div>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+						</div>
+					</div>
 				</header>
 
-					{ workData.projects.map((project, index) => this.renderProject(project, index)) }
+				{ workData.projects.map((project, index) => this.renderProject(project, index)) }
 
 				<button onClick={ this.clickButton.bind(this) }>Sho Menu</button>
 			</section>

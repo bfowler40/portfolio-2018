@@ -50,14 +50,26 @@
 
 	.nav-link--active + & {
 		opacity: 1;
+
+		& + div .image {
+			opacity: 1;
+		}
 	}
 
-	.nav-list:hover .nav-link--active + & {
+	.nav--menu_item_hovered .nav-link--active + & {
 		opacity: 0;
+
+		& + div .image {
+			opacity: 0;
+		}
 	}
 
-	.nav-list:hover .nav-item:hover & {
+	.nav--menu_item_hovered .nav-item:hover & {
 		opacity: 1;
+
+		& + div .image {
+			opacity: 1;
+		}
 	}
 
 	&:before {
@@ -109,7 +121,4 @@
 		bottom: -1vh;
 	}
 
-	.nav-item:hover & {
-		opacity: 1;
-	}
 }
