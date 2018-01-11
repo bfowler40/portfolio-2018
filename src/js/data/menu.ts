@@ -1,7 +1,6 @@
-console.warn('Menu.ts: Remove menuCurrentElement if unused');
 export default {
-	menuActive: false,
-	menuCurrentElement: false,
+	menuActive: true,
+	menuItemHovered: false,
 	menuDefault: 'work',
 	menuItems: [
 		{

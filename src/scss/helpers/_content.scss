@@ -1,0 +1,29 @@
+
+.content {
+	max-width: pxToRem(1440);
+	margin: pxToRem(128) auto;
+	white-space: pre-line;
+}
+
+.content-header {
+	max-width: pxToRem(860);
+}
+
+.content-title {
+	position: relative;
+	display: inline-block;
+	color: $colorWhite;
+	line-height: 1.1;
+	margin: 0 0 pxToRem(32);
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: pxToRem(-16);
+		bottom: 0;
+		left: pxToRem(-16);
+		z-index: -1;
+		background-color: $colorAccent500;
+	}
+}

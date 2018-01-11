@@ -1,0 +1,50 @@
+
+.work-project {
+	position: relative;
+	max-width: pxToRem(640);
+
+	&:nth-child(odd) {
+		margin: pxToRem(144) 0 pxToRem(144) auto;
+	}
+
+	&:nth-child(even) {
+		margin: pxToRem(144) auto pxToRem(144) 0;
+	}
+}
+
+.work-project-title {
+	line-height: 1.2;
+}
+
+.work-project-platform {
+	margin: 0 0 pxToRem(16);
+}
+
+.work-project-image {
+	position: absolute;
+	top: pxToRem(-32);
+	width: 50vw;
+	height: auto;
+	z-index: -1;
+
+	.work-project:nth-child(odd) & {
+		right: 40vw;
+	}
+
+	.work-project:nth-child(even) & {
+		left: 40vw;
+	}
+}
+
+.work-project-link {
+	display: inline-block;
+	font-weight: $fontWeightBold;
+	color: $colorAccent500;
+	letter-spacing: pxToRem(2);
+	text-transform: uppercase;
+	margin: pxToRem(24) 0 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

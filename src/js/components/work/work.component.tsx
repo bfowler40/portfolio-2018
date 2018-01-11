@@ -18,14 +18,21 @@ export class Work extends React.Component<any, any> {
 
 	public render(): JSX.Element {
 		return (
-			<section className="work">
-				<header className="work-header">
-					<h2 className="headings-large">{ workData.title }</h2>
-					<div className="work-description">{ workData.description }</div>
+			<section className="content">
+				<header className="content-header">
+					<h2 className="headings-large content-title">{ workData.title }</h2>
+					<div className="content-description">
+						{ workData.description }
+						<br/>
+						<h3 className="headings-standard">Y'all got any more of them awards?</h3>
+						<div>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+						</div>
+					</div>
 				</header>
-				<div className="work-examples">
-					{ workData.projects.map((project, index) => this.renderProject(project, index)) }
-				</div>
+
+				{ workData.projects.map((project, index) => this.renderProject(project, index)) }
+
 				<button onClick={ this.clickButton.bind(this) }>Sho Menu</button>
 			</section>
 		);
@@ -34,10 +41,16 @@ export class Work extends React.Component<any, any> {
 	public renderProject(project, index): JSXElement {
 		return (
 			<div className="work-project" key={ index }>
-				<h3 className="work-project-title">{ project.title }</h3>
-				<h4 className="work-project-platform">{ project.platform }</h4>
+				<h3 className="headings-medium work-project-title">{ project.title }</h3>
+				<h4 className="headings-standard work-project-platform">{ project.platform }</h4>
 				<div className="work-project-description">{ project.description }</div>
 				<img className="work-project-image" src={ `/dist${ project.image}` } />
+				<a	className="work-project-link"
+					href={ project.url }
+					target="_blank"
+					rel="nofollow noreferrer">
+					Website
+				</a>
 			</div>
 		);
 	}

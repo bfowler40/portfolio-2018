@@ -2,7 +2,11 @@ import * as classNames from 'classnames';
 import * as React      from 'react';
 import { connect }     from 'react-redux';
 import { NavLink }     from 'react-router-dom';
-import { menuToggle }  from '../../actions/menu.action';
+import {
+	menuItemMouseEnter,
+	menuItemMouseLeave,
+	menuToggle
+}  from '../../actions/menu.action';
 
 import * as campos from '../../../images/work-campos.jpg';
 import * as nous   from '../../../images/work-nous.jpg';
@@ -20,19 +24,30 @@ export class NavItem extends React.Component<any, any> {
 		this.props.dispatch(menuToggle());
 	}
 
+	public onMouseEnter(): void {
+		this.props.dispatch(menuItemMouseEnter());
+	}
+
+	public onMouseLeave(): void {
+		this.props.dispatch(menuItemMouseLeave());
+	}
+
 	public render(): void {
-		const activeItem = (
+		const activeItem : boolean = (
 			this.props.menuItem.slug === this.props.menuDefault &&
 			location.pathname === '/'
 		);
-		const navItemClass = classNames(
+		const navItemClass: any = classNames(
 			'nav-link', { 'nav-link--active': activeItem }
 		);
+
 
 		return (
 			<div>
 				<NavLink
 					onClick={ this.toggleMenu.bind(this) }
+					onMouseEnter={ this.onMouseEnter.bind(this) }
+					onMouseLeave={ this.onMouseLeave.bind(this) }
 					className={ navItemClass }
 					activeClassName="nav-link--active"
 					to={ `/${ this.props.menuItem.slug }` }>
@@ -47,14 +62,16 @@ export class NavItem extends React.Component<any, any> {
 		);
 	}
 
+
+
 	public temp() {
 		if (
 			this.props.menuItem.slug === this.props.menuDefault
 		) {
 			return (
 				<div>
-					<img className="image image-campos" src={ `/dist${campos}`} />
-					<img className="image image-nous" src={ `/dist${nous}`} />
+					<img className="image image-campos" src={ `${campos}`} />
+					<img className="image image-nous" src={ `${nous}`} />
 				</div>
 			);
 		}

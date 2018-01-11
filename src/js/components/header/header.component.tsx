@@ -16,7 +16,7 @@ export class Header extends React.Component<any, any> {
 
 	public clickButton(e: Event): void {
 		this.props.dispatch(menuToggle());
-		e.target.blur();
+		(e.target as HTMLButtonElement).blur();
 	}
 
 	public render(): JSX.Element {
@@ -32,10 +32,10 @@ export class Header extends React.Component<any, any> {
 					className="header-toggle_menu">
 					<SVG
 						className="header-icon header-icon--close"
-						src={ `/dist/${ iconSkull }` } />
+						src={ `${ iconSkull }` } />
 					<SVG
 						className="header-icon header-icon--open"
-						src={ `/dist/${ iconRocket }` } />
+						src={ `${ iconRocket }` } />
 				</button>
 				<h1 className="headings-standard header-title">Ben Fowler</h1>
 				<a

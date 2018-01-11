@@ -3,12 +3,13 @@ import * as React      from 'react';
 import { connect }     from 'react-redux';
 import { NavLink }     from 'react-router-dom';
 import { menuToggle }  from '../../actions/menu.action';
-import { NavItem }     from './nav-item.component.tsx';
+import { NavItem }     from './nav-item.component';
 
 @connect((store: any): any => {
 	return {
 		menuActive: store.menu.menuActive,
 		menuItems: store.menu.menuItems,
+		menuItemHovered: store.menu.menuItemHovered,
 	};
 })
 export class Nav extends React.Component<any, any> {
@@ -19,7 +20,10 @@ export class Nav extends React.Component<any, any> {
 
 	public render(): JSX.Element {
 		const navClass = classNames(
-			'nav', { 'nav--menu_active': this.props.menuActive }
+			'nav', {
+				'nav--menu_active': this.props.menuActive,
+				'nav--menu_item_hovered': this.props.menuItemHovered,
+			}
 		);
 
 		return (
@@ -29,8 +33,8 @@ export class Nav extends React.Component<any, any> {
 				</ul>
 				<div className="nav-details">
 					<div className="nav-description">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-						do eiusmod tempor.</p>
+						<p>lorem ipsum</p>
+						<p>lorem ipsum</p>
 						<ul className="nav-contact">
 							<li><a href="mailto:bfowler40@gmail.com">* bfowler40@gmail.com</a></li>
 							<li><a href="#">* LinkedIn</a></li>
